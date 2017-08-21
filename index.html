@@ -91,6 +91,99 @@
             divRight.style.margin = "5px";
             divRight.innerHTML = "RIGHT";
             document.body.appendChild(divRight);
+
+
+    //CREATE EVENT ON THE BUTTON REQUESTE AJAX TO EXPRESS PATH.
+    
+    //Event start.
+    divStart.addEventListener('click', function() {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', '/bot/start/');
+        xhr.onreadystatechange = function() {
+            if(xhr.status === XMLHttpRequest.DONE) {
+                console.log(xhr.response);
+                eval(xhr.responseText);
+            } else {
+                console.error("code de status inattendu", this.status);
+            }
+        };
+    xhr.send(null);
+    });
+
+    //Event stop.
+    divStop.addEventListener('click', function() {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', '/bot/start/');
+        xhr.onreadystatechange = function() {
+            if(xhr.status === XMLHttpRequest.DONE) {
+                console.log(xhr.response);
+                eval(xhr.responseText);
+            } else {
+                console.error("code de status inattendu", this.status);
+            }
+        };
+    xhr.send(null);
+    });
+
+    //Event left.
+    divLeft.addEventListener('click', function() {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', '/bot/start/');
+        xhr.onreadystatechange = function() {
+            if(xhr.status === XMLHttpRequest.DONE) {
+                console.log(xhr.response);
+                eval(xhr.responseText);
+            } else {
+                console.error("code de status inattendu", this.status);
+            }
+        };
+    xhr.send(null);
+    });
+
+    //Event forward.
+    divForward.addEventListener('click', function() {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', '/bot/start/');
+        xhr.onreadystatechange = function() {
+            if(xhr.status === XMLHttpRequest.DONE) {
+                console.log(xhr.response);
+                eval(xhr.responseText);
+            } else {
+                console.error("code de status inattendu", this.status);
+            }
+        };
+    xhr.send(null);
+    });
+
+    //Event back.
+    divBack.addEventListener('click', function() {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', '/bot/start/');
+        xhr.onreadystatechange = function() {
+            if(xhr.status === XMLHttpRequest.DONE) {
+                console.log(xhr.response);
+                eval(xhr.responseText);
+            } else {
+                console.error("code de status inattendu", this.status);
+            }
+        };
+    xhr.send(null);
+    });
+
+    //Event right.
+    divRight.addEventListener('click', function() {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', '/bot/start/');
+        xhr.onreadystatechange = function() {
+            if(xhr.status === XMLHttpRequest.DONE) {
+                console.log(xhr.response);
+                eval(xhr.responseText);
+            } else {
+                console.error("code de status inattendu", this.status);
+            }
+        };
+    xhr.send(null);
+    });
     </script>
 
 </body>
