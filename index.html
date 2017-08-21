@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Control bot mobile usb.</title>
+</head>
+<body>
+    <h1 style="text-align: center;font-size: 3em";>Control Bot direction, acceleration and stop</h1>
+    <!-- link install driver makedblock : https://github.com/Makeblock-official/mbot_nodebots -->
+    <script>
+    'use strict';
+    // CREATE BUTTON DIRECTION.
+
+        //Button start.
+        let divStart = document.createElement("button");
+        divStart.classList.add("divStart");
+        divStart.style.backgroundColor = "#27ae60";
+        divStart.style.color = "white";
+        divStart.style.border  = "none";
+        divStart.style.fontSize  = "2em";
+        divStart.style.textAlign = "center";
+        divStart.style.letterSpacing = "5px";
+        divStart.style.marginLeft = "19%";
+        divStart.innerHTML = "START";
+        document.body.appendChild(divStart);
+
+
+    //Button stop.
+    let divStop = document.createElement("button");
+        divStop.classList.add("divStop");
+        divStop.style.backgroundColor = "#c0392b";
+        divStop.style.color = "white";
+        divStop.style.border  = "none";
+        divStop.style.fontSize  = "2em";
+        divStop.style.textAlign = "center";
+        divStop.style.margin = "5px";
+        divStop.style.letterSpacing = "5px";
+        divStop.innerHTML = "STOP";
+        document.body.appendChild(divStop);
+
+    //Button left.
+    let divLeft = document.createElement("button");
+        divLeft.classList.add("divLeft");
+        divLeft.style.backgroundColor = "#2980b9";
+        divLeft.style.color = "white";
+        divLeft.style.border  = "none";
+        divLeft.style.fontSize  = "2em";
+        divLeft.style.textAlign = "center";
+        divLeft.style.letterSpacing = "5px";
+        divLeft.style.margin = "5px";
+        divLeft.innerHTML = "LEFT";
+        document.body.appendChild(divLeft);
+
+    //Button forward.
+    let divForward = document.createElement("button");
+        divForward.classList.add("divForward");
+        divForward.style.backgroundColor = "#2c3e50";
+        divForward.style.color = "white";
+        divForward.style.border  = "none";
+        divForward.style.fontSize  = "2em";
+        divForward.style.textAlign = "center";
+        divForward.style.letterSpacing = "5px";
+        divForward.style.margin = "5px";
+        divForward.innerHTML = "FORWARD";
+        document.body.appendChild(divForward);
+
+    //Button back.
+    let divBack = document.createElement("button");
+        divBack.classList.add("divBack");
+        divBack.style.backgroundColor = "black";
+        divBack.style.color = "white";
+        divBack.style.border  = "none";
+        divBack.style.fontSize  = "2em";
+        divBack.style.textAlign = "center";
+        divBack.style.letterSpacing = "5px";
+        divBack.style.margin = "5px";
+        divBack.innerHTML = "BACK";
+        document.body.appendChild(divBack);
+
+    //Button right.
+    let divRight = document.createElement("button");
+            divRight.classList.add("divRight");
+            divRight.style.backgroundColor = "#8e44ad";
+            divRight.style.color = "white";
+            divRight.style.border  = "none";
+            divRight.style.fontSize  = "2em";
+            divRight.style.textAlign = "center";
+            divRight.style.letterSpacing = "5px";
+            divRight.style.margin = "5px";
+            divRight.innerHTML = "RIGHT";
+            document.body.appendChild(divRight);
+    </script>
+
+</body>
+</html>
