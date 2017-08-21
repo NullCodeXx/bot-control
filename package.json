@@ -1,19 +1,22 @@
 {
   "name": "bot-control",
   "version": "1.0.0",
-  "description": "Bot control mobile USB",
+  "description": "Control the bot with NodeJS (request AJAX) to rooter Express",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EvanLeroyer/bot-control.git"
+    "url": "git+https://github.com/djaafarcode/bot-control.git"
   },
-  "author": "E. LE ROYER && D. BOUMAZA",
+  "author": "D. BOUMAZA",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EvanLeroyer/bot-control/issues"
+    "url": "https://github.com/djaafarcode/bot-control/issues"
   },
-  "homepage": "https://github.com/EvanLeroyer/bot-control#readme"
+  "homepage": "https://github.com/djaafarcode/bot-control#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
 }
