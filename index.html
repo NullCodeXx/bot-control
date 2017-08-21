@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Control bot mobile usb.</title>
 </head>
-<body>
-    <h1 style="text-align: center;font-size: 3em";>Control Bot direction, acceleration and stop</h1>
+<body style="background-color: #34495e;">
+    <h1 style="text-align: center;font-size: 3em;color:#ffffff;text-shadow: 1px 1px 1px #000;";>Control Bot direction, acceleration and stop</h1>
     <!-- link install driver makedblock : https://github.com/Makeblock-official/mbot_nodebots -->
+    <!-- ADD IMAGE. -->
+    
     <script>
     'use strict';
     // CREATE BUTTON DIRECTION.
@@ -22,7 +24,7 @@
         divStart.style.fontSize  = "2em";
         divStart.style.textAlign = "center";
         divStart.style.letterSpacing = "5px";
-        divStart.style.marginLeft = "19%";
+        divStart.style.marginLeft = "15%";
         divStart.innerHTML = "START";
         document.body.appendChild(divStart);
 
@@ -91,8 +93,7 @@
             divRight.style.margin = "5px";
             divRight.innerHTML = "RIGHT";
             document.body.appendChild(divRight);
-
-
+    
     //CREATE EVENT ON THE BUTTON REQUESTE AJAX TO EXPRESS PATH.
     
     //Event start.
@@ -185,6 +186,6 @@
     xhr.send(null);
     });
     </script>
-
+    <img src="content/bot.gif" alt="bot animation" style="height: 100px;width: 140px;margin-left: -10px;">
 </body>
 </html>
