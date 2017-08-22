@@ -7,185 +7,223 @@
     <title>Control bot mobile usb.</title>
 </head>
 <body style="background-color: #34495e;">
-    <h1 style="text-align: center;font-size: 3em;color:#ffffff;text-shadow: 1px 1px 1px #000;";>Control Bot direction, acceleration and stop</h1>
-    <!-- link install driver makedblock : https://github.com/Makeblock-official/mbot_nodebots -->
-    <!-- ADD IMAGE. -->
-    
-    <script>
-    'use strict';
-    // CREATE BUTTON DIRECTION.
-
-        //Button start.
-        let divStart = document.createElement("button");
-        divStart.classList.add("divStart");
-        divStart.style.backgroundColor = "#27ae60";
-        divStart.style.color = "white";
-        divStart.style.border  = "none";
-        divStart.style.fontSize  = "2em";
-        divStart.style.textAlign = "center";
-        divStart.style.letterSpacing = "5px";
-        divStart.style.marginLeft = "15%";
-        divStart.innerHTML = "START";
-        document.body.appendChild(divStart);
+    <main>
+        <section>
+            <h1 style="text-align: center;font-size: 3em;color:#ffffff;text-shadow: 1px 1px 1px #000;";>Control Bot direction, acceleration and stop</h1>
+            <!-- link install driver makedblock : https://github.com/Makeblock-official/mbot_nodebots -->
+            <!-- ADD IMAGE. -->
+            <img src="content/bot.gif" alt="bot animation" style="height: 100px;width: 140px;margin-left: -10px;">
+        </section>
+        <section>
+            <script>
+                'use strict';
 
 
-    //Button stop.
-    let divStop = document.createElement("button");
-        divStop.classList.add("divStop");
-        divStop.style.backgroundColor = "#c0392b";
-        divStop.style.color = "white";
-        divStop.style.border  = "none";
-        divStop.style.fontSize  = "2em";
-        divStop.style.textAlign = "center";
-        divStop.style.margin = "5px";
-        divStop.style.letterSpacing = "5px";
-        divStop.innerHTML = "STOP";
-        document.body.appendChild(divStop);
 
-    //Button left.
-    let divLeft = document.createElement("button");
-        divLeft.classList.add("divLeft");
-        divLeft.style.backgroundColor = "#2980b9";
-        divLeft.style.color = "white";
-        divLeft.style.border  = "none";
-        divLeft.style.fontSize  = "2em";
-        divLeft.style.textAlign = "center";
-        divLeft.style.letterSpacing = "5px";
-        divLeft.style.margin = "5px";
-        divLeft.innerHTML = "LEFT";
-        document.body.appendChild(divLeft);
+                // ___________________________ ___________________________
+                // CREATE BUTTON DIRECTION.
+            
+                    //Button start.
+                    let divStart = document.createElement("button");
+                    divStart.classList.add("divStart");
+                    divStart.style.backgroundColor = "#27ae60";
+                    divStart.style.color = "white";
+                    divStart.style.border  = "none";
+                    divStart.style.fontSize  = "2em";
+                    divStart.style.textAlign = "center";
+                    divStart.style.letterSpacing = "5px";
+                    divStart.style.marginLeft = "15%";
+                    divStart.innerHTML = "START";
+                    document.body.appendChild(divStart);
+            
+            
+                //Button stop.
+                let divStop = document.createElement("button");
+                    divStop.classList.add("divStop");
+                    divStop.style.backgroundColor = "#c0392b";
+                    divStop.style.color = "white";
+                    divStop.style.border  = "none";
+                    divStop.style.fontSize  = "2em";
+                    divStop.style.textAlign = "center";
+                    divStop.style.margin = "5px";
+                    divStop.style.letterSpacing = "5px";
+                    divStop.innerHTML = "STOP";
+                    document.body.appendChild(divStop);
+            
+                //Button left.
+                let divLeft = document.createElement("button");
+                    divLeft.classList.add("divLeft");
+                    divLeft.style.backgroundColor = "#2980b9";
+                    divLeft.style.color = "white";
+                    divLeft.style.border  = "none";
+                    divLeft.style.fontSize  = "2em";
+                    divLeft.style.textAlign = "center";
+                    divLeft.style.letterSpacing = "5px";
+                    divLeft.style.margin = "5px";
+                    divLeft.innerHTML = "LEFT";
+                    document.body.appendChild(divLeft);
+            
+                //Button forward.
+                let divForward = document.createElement("button");
+                    divForward.classList.add("divForward");
+                    divForward.style.backgroundColor = "#2c3e50";
+                    divForward.style.color = "white";
+                    divForward.style.border  = "none";
+                    divForward.style.fontSize  = "2em";
+                    divForward.style.textAlign = "center";
+                    divForward.style.letterSpacing = "5px";
+                    divForward.style.margin = "5px";
+                    divForward.innerHTML = "FORWARD";
+                    document.body.appendChild(divForward);
+            
+                //Button back.
+                let divBack = document.createElement("button");
+                    divBack.classList.add("divBack");
+                    divBack.style.backgroundColor = "black";
+                    divBack.style.color = "white";
+                    divBack.style.border  = "none";
+                    divBack.style.fontSize  = "2em";
+                    divBack.style.textAlign = "center";
+                    divBack.style.letterSpacing = "5px";
+                    divBack.style.margin = "5px";
+                    divBack.innerHTML = "BACK";
+                    document.body.appendChild(divBack);
+            
+                //Button right.
+                let divRight = document.createElement("button");
+                        divRight.classList.add("divRight");
+                        divRight.style.backgroundColor = "#8e44ad";
+                        divRight.style.color = "white";
+                        divRight.style.border  = "none";
+                        divRight.style.fontSize  = "2em";
+                        divRight.style.textAlign = "center";
+                        divRight.style.letterSpacing = "5px";
+                        divRight.style.margin = "5px";
+                        divRight.innerHTML = "RIGHT";
+                        document.body.appendChild(divRight);
+            
+                //TEST MOTOT BOT.
+                let divTest = document.createElement("button");
+                        divTest.classList.add("divTest");
+                        divTest.style.backgroundColor = "##ecf0f1";
+                        divTest.style.color = "#c0392b";
+                        divTest.style.border  = "none";
+                        divTest.style.fontSize  = "2em";
+                        divTest.style.textAlign = "center";
+                        divTest.style.letterSpacing = "5px";
+                        divTest.style.margin = "5px";
+                        divTest.style.marginLeft = "1%";
+                        divTest.innerHTML = "TEST";
+                        document.body.appendChild(divTest);
+                
+                //CREATE EVENT ON THE BUTTON REQUESTE AJAX TO EXPRESS PATH.
+                
+                //Event start.
+                divStart.addEventListener('click', function() {
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'http://localhost:3000/bot/start');
+                    xhr.onreadystatechange = function() {
+                        if(xhr.status === XMLHttpRequest.DONE) {
+                            console.log(xhr.response);
+                            eval(xhr.responseText);
+                        } else {
+                            console.error("code de status inattendu", this.status);
+                        }
+                    };
+                xhr.send(null);
+                });
+            
+                //Event stop.
+                divStop.addEventListener('click', function() {
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'http://localhost:3000/bot/stop');
+                    xhr.onreadystatechange = function() {
+                        if(xhr.status === XMLHttpRequest.DONE) {
+                            console.log(xhr.response);
+                            eval(xhr.responseText);
+                        } else {
+                            console.error("code de status inattendu", this.status);
+                        }
+                    };
+                xhr.send(null);
+                });
+            
+                //Event left.
+                divLeft.addEventListener('click', function() {
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'http://localhost:3000/bot/left');
+                    xhr.onreadystatechange = function() {
+                        if(xhr.status === XMLHttpRequest.DONE) {
+                            console.log(xhr.response);
+                            eval(xhr.responseText);
+                        } else {
+                            console.error("code de status inattendu", this.status);
+                        }
+                    };
+                xhr.send(null);
+                });
+            
+                //Event forward.
+                divForward.addEventListener('click', function() {
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'http://localhost:3000/bot/forward');
+                    xhr.onreadystatechange = function() {
+                        if(xhr.status === XMLHttpRequest.DONE) {
+                            console.log(xhr.response);
+                            eval(xhr.responseText);
+                        } else {
+                            console.error("code de status inattendu", this.status);
+                        }
+                    };
+                xhr.send(null);
+                });
+            
+                //Event back.
+                divBack.addEventListener('click', function() {
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'http://localhost:3000/bot/back');
+                    xhr.onreadystatechange = function() {
+                        if(xhr.status === XMLHttpRequest.DONE) {
+                            console.log(xhr.response);
+                            eval(xhr.responseText);
+                        } else {
+                            console.error("code de status inattendu", this.status);
+                        }
+                    };
+                xhr.send(null);
+                });
+            
+                //Event right.
+                divRight.addEventListener('click', function() {
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'http://localhost:3000/bot/right');
+                    xhr.onreadystatechange = function() {
+                        if(xhr.status === XMLHttpRequest.DONE) {
+                            console.log(xhr.response);
+                            eval(xhr.responseText);
+                        } else {
+                            console.error("code de status inattendu", this.status);
+                        }
+                    };
+                xhr.send(null);
+                });
 
-    //Button forward.
-    let divForward = document.createElement("button");
-        divForward.classList.add("divForward");
-        divForward.style.backgroundColor = "#2c3e50";
-        divForward.style.color = "white";
-        divForward.style.border  = "none";
-        divForward.style.fontSize  = "2em";
-        divForward.style.textAlign = "center";
-        divForward.style.letterSpacing = "5px";
-        divForward.style.margin = "5px";
-        divForward.innerHTML = "FORWARD";
-        document.body.appendChild(divForward);
-
-    //Button back.
-    let divBack = document.createElement("button");
-        divBack.classList.add("divBack");
-        divBack.style.backgroundColor = "black";
-        divBack.style.color = "white";
-        divBack.style.border  = "none";
-        divBack.style.fontSize  = "2em";
-        divBack.style.textAlign = "center";
-        divBack.style.letterSpacing = "5px";
-        divBack.style.margin = "5px";
-        divBack.innerHTML = "BACK";
-        document.body.appendChild(divBack);
-
-    //Button right.
-    let divRight = document.createElement("button");
-            divRight.classList.add("divRight");
-            divRight.style.backgroundColor = "#8e44ad";
-            divRight.style.color = "white";
-            divRight.style.border  = "none";
-            divRight.style.fontSize  = "2em";
-            divRight.style.textAlign = "center";
-            divRight.style.letterSpacing = "5px";
-            divRight.style.margin = "5px";
-            divRight.innerHTML = "RIGHT";
-            document.body.appendChild(divRight);
-    
-    //CREATE EVENT ON THE BUTTON REQUESTE AJAX TO EXPRESS PATH.
-    
-    //Event start.
-    divStart.addEventListener('click', function() {
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', '/bot/start/');
-        xhr.onreadystatechange = function() {
-            if(xhr.status === XMLHttpRequest.DONE) {
-                console.log(xhr.response);
-                eval(xhr.responseText);
-            } else {
-                console.error("code de status inattendu", this.status);
-            }
-        };
-    xhr.send(null);
-    });
-
-    //Event stop.
-    divStop.addEventListener('click', function() {
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', '/bot/start/');
-        xhr.onreadystatechange = function() {
-            if(xhr.status === XMLHttpRequest.DONE) {
-                console.log(xhr.response);
-                eval(xhr.responseText);
-            } else {
-                console.error("code de status inattendu", this.status);
-            }
-        };
-    xhr.send(null);
-    });
-
-    //Event left.
-    divLeft.addEventListener('click', function() {
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', '/bot/start/');
-        xhr.onreadystatechange = function() {
-            if(xhr.status === XMLHttpRequest.DONE) {
-                console.log(xhr.response);
-                eval(xhr.responseText);
-            } else {
-                console.error("code de status inattendu", this.status);
-            }
-        };
-    xhr.send(null);
-    });
-
-    //Event forward.
-    divForward.addEventListener('click', function() {
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', '/bot/start/');
-        xhr.onreadystatechange = function() {
-            if(xhr.status === XMLHttpRequest.DONE) {
-                console.log(xhr.response);
-                eval(xhr.responseText);
-            } else {
-                console.error("code de status inattendu", this.status);
-            }
-        };
-    xhr.send(null);
-    });
-
-    //Event back.
-    divBack.addEventListener('click', function() {
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', '/bot/start/');
-        xhr.onreadystatechange = function() {
-            if(xhr.status === XMLHttpRequest.DONE) {
-                console.log(xhr.response);
-                eval(xhr.responseText);
-            } else {
-                console.error("code de status inattendu", this.status);
-            }
-        };
-    xhr.send(null);
-    });
-
-    //Event right.
-    divRight.addEventListener('click', function() {
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', '/bot/start/');
-        xhr.onreadystatechange = function() {
-            if(xhr.status === XMLHttpRequest.DONE) {
-                console.log(xhr.response);
-                eval(xhr.responseText);
-            } else {
-                console.error("code de status inattendu", this.status);
-            }
-        };
-    xhr.send(null);
-    });
-    </script>
-    <img src="content/bot.gif" alt="bot animation" style="height: 100px;width: 140px;margin-left: -10px;">
+                //Event test.
+                divTest.addEventListener('click', function() {
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'http://localhost:3000/bot/test');
+                    xhr.onreadystatechange = function() {
+                        if(xhr.status === XMLHttpRequest.DONE) {
+                            console.log(xhr.response);
+                            eval(xhr.responseText);
+                        } else {
+                            console.error("code de status inattendu", this.status);
+                        }
+                    };
+                xhr.send(null);
+                });
+                </script>
+        </section>
+    </main>
 </body>
 </html>
