@@ -6,8 +6,8 @@ doc github: https://github.com/Makeblock-official/mbot_nodebots
 
 //ROUTAGE AVEC L'INSTANCE EXPRESS DU DERIVER DE HTTP.
 
-let express = require('express'); //renvoie une object.
-let path = require('path');
+let express = require('express'); //renvoie un object rooter.
+let path = require('path'); //Renvoie un object chemin.
 let myAppBot = express(); //Crée une app express. 
 
 //Autorise les droits de requete xhr entre 2 nom de domaine.
@@ -23,9 +23,8 @@ myAppBot.listen(3000, function() {
 
 //Start page index.html a la racine.
 myAppBot.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, '..', '/public/index.html'));
+    res.sendFile(path.join(__dirname, '..', '/public/index.html')); // utilise l'object & function pour l'aborescence des fichiers.
 });
-
 //Start
 myAppBot.get("/bot/start", function (req, res) {
     res.send("Demarre");
